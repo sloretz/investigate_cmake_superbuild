@@ -61,7 +61,7 @@ This means having just a CMake package that builds its dependencies from source 
 * Maybe by having a step to download binaries or static libs and building against that
 * Maybe by copy/pasting the code into your repo (for header only libraries)
 
-### Monorepo
+### Monorepo and build everything fromm source
 
 Ugh.
 This is fine if the output of the project is an executable that no one every needs to link against or use in the process of building other software.
