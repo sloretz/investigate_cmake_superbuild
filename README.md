@@ -24,8 +24,11 @@ I bet [CPM CMake](https://github.com/cpm-cmake/CPM.cmake) would be a great tool 
 
 ## Links that talk about superbuilds
 
+* 2021-06-25 https://www.scivision.dev/cmake-fetchcontent-vs-external-project/ - a blog talking about FetchContent and ExternalProject
 * 2021-04-21 https://www.reddit.com/r/cmake/comments/mvsuun/cmake_superbuild_pattern/ - a user recommends against superbuilds, in favor of FetchContent
+* 2020-12-14 https://www.youtube.com/watch?v=nBptg3SHPGU  a youtube video about superbuilds - author says they're useful for packaging fixed versions of things but not so great for daily development (timestamp 13:15)
 * 2020-12-13 https://gitlab.kitware.com/cmake/cmake/-/issues/21592
+* 2020-06-10 https://discourse.cmake.org/t/correct-way-to-use-third-party-libraries-in-cmake-project/1368/2 A CMake developer ranking superbuild's highly for using third party libraries, while also warning that they're fragile and can make development harder.
 * 2018-03-16 https://www.reddit.com/r/cmake/comments/84zou4/superbuildexternal_projects/ - someone looking for alternatives to the superbuild pattern
 * 2017-12-08 https://www.kitware.com/cmake-superbuilds-git-submodules/ 
 
