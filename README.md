@@ -38,3 +38,32 @@ I bet [CPM CMake](https://github.com/cpm-cmake/CPM.cmake) would be a great tool 
 * https://github.com/OpenChemistry/openchemistry
 * https://github.com/robotology/robotology-superbuild
 * https://simpleitk.readthedocs.io/en/master/building.html#building-using-superbuild
+
+
+## Alternatives to superbuilds
+
+### Use a tool that will call a bunch of projects in the right order:
+
+* [colcon](https://colcon.readthedocs.io)
+* [catkin_make or catkin_make_isolated](https://github.com/ros/catkin)
+* [catkin_tools (which has a CLI tool named catkin)](https://github.com/catkin/catkin_tools)
+
+### Write a bunch of scripts to build projects in the right order
+
+I remember the [Ignition Robotics](https://www.ignitionrobotics.org) used to be that way, but now I think it uses colcon.
+
+### Vendor your packages
+This means having just a CMake package that builds its dependencies from source along with it's own targets.
+
+* Maybe by calling FetchContent and add_subdirectory
+  * Maybe with help of another tool like [CPM](https://github.com/cpm-cmake/CPM.cmake).
+* Maybe with git submodules and custom CMakeLists.txt
+* Maybe by having a step to download binaries or static libs and building against that
+* Maybe by copy/pasting the code into your repo (for header only libraries)
+
+### Monorepo
+
+Ugh.
+This is fine if the output of the project is an executable that no one every needs to link against or use in the process of building other software.
+Like making a game - without support for modding - that's a great place for a monorepo.
+In any other context a monorepo is a massive pain for users.
