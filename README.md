@@ -37,3 +37,4 @@ I bet [CPM CMake](https://github.com/cpm-cmake/CPM.cmake) would be a great tool 
 ## Examples of superbuilds
 * https://github.com/OpenChemistry/openchemistry
 * https://github.com/robotology/robotology-superbuild
+* https://simpleitk.readthedocs.io/en/master/building.html#building-using-superbuild
